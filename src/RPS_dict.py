@@ -1,6 +1,7 @@
 import random
 from enum import IntEnum
 
+memoria = []
 
 class GameAction(IntEnum):
 
@@ -60,7 +61,33 @@ def assess_game(user_action, computer_action):
 
 
 def get_computer_action():
-    computer_selection = random.randint(0, len(GameAction) - 1)
+    def frequency_analysis():
+        rock_salida = memoria.count(0)
+        paper_salida = memoria.count(1)
+        scissors_salida = memoria.count(2)
+
+        total_salidas = rock_salida + paper_salida + scissors_salida
+
+        porcentaje_rock = rock_salida / total_salidas
+        porcentaje_paper = paper_salida / total_salidas
+        porcentaje_scissors = scissors_salida / total_salidas
+
+        max_porcentaje = max(porcentaje_rock, porcentaje_paper, porcentaje_scissors)
+
+        if max_porcentaje >= 0.40:
+            if max_porcentaje == porcentaje_rock:
+                return 1
+            elif max_porcentaje == porcentaje_paper:
+                return 2
+            elif max_porcentaje == porcentaje_scissors:
+                return 0
+        else:
+            return (random.randint(0, len(GameAction) - 1))
+
+    if len(memoria) > 5:
+        computer_selection = frequency_analysis()
+    else:
+        computer_selection = random.randint(0, len(GameAction) - 1)
     computer_action = GameAction(computer_selection)
     print(f"Computer picked {computer_action.name}.")
 
@@ -92,6 +119,7 @@ def main():
             print(f"Invalid selection. Pick a choice in range {range_str}!")
             continue
 
+        memoria.append(user_action.value)
         computer_action = get_computer_action()
         assess_game(user_action, computer_action)
 
