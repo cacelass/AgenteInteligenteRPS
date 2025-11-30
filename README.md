@@ -41,7 +41,7 @@ El juego opera bajo una lógica determinista y cíclica de dominancia, que es la
 El agente transforma el entorno del juego de episódico a secuencial mediante el uso de la memoria (memoria = []), que almacena el historial de las jugadas del usuario.
 
 1. De 1 a 5 rondas elige una acción completamente aleatoria.
-2. De la 6 en adelante activa el análisis de frecuencia para buscar patrones.
+2. De la ronda 6 en adelante activa el análisis de frecuencia para buscar patrones.
 
 #### Regla de Decisión (El 40%)
 
