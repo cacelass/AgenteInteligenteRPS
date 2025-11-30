@@ -43,7 +43,7 @@ El agente transforma el entorno del juego de episódico a secuencial mediante el
 de 1 a 5 rondas elige una acción completamente aleatoria.
 de la 6 en adelante activa el análisis de frecuencia para buscar patrones.
 
-## Regla de Decisión (El 40%)
+#### Regla de Decisión (El 40%)
 
 En la fase de Explotación, el agente utiliza la función frequency_analysis() para aplicar la siguiente regla:
 
