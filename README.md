@@ -1,11 +1,13 @@
 Práctica Axentes Intelixentes
 =============================
 
-   * [Contorno de tarefas](#tcontorno-de-tarefas)
-   * [Estrutura do axente](#estrutura-do-axente)
-   * [requisitos](#requisitos)
-   * [Extensión](#extensión)
-   * [Bibliografía](#bibliografía)
+## Índice
+1. [Contorno de tarefas](#contorno-de-tarefas)  
+2. [Estrutura do axente](#estrutura-do-axente)  
+3. [Requisitos](#requisitos)  
+4. [Extensión](#extensión)  
+5. [Bibliografía](#bibliografía)
+
 
 Proponse programar un axente intelixente solución ao entorno de tarefas do xogo pedra, papel, tesoiras, seguindo as directrices de modelado propostas no capítulo 2 _Intelligent Agents_ do libro _IA: A modern approach, Russell & Norvig_.
 
